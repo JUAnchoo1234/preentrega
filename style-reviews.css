@@ -1,0 +1,270 @@
+/* --- RESET CSS --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.nav-container{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+
+
+}
+
+.nav-logo{
+  display:flex;
+  justify-content:center;
+  width:10%;
+  height:auto;
+  align-items:center;
+     margin-top: 10px;  
+  
+
+}
+
+.logo{
+  width:100%;
+  height:10%;
+
+}
+
+.navbar{
+  background-color: #f8f8f8;
+    border-width: 1px;
+    font-family: "Arapey";
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 40px;
+    position: relative;
+    width:100%;
+}
+
+.navlinks{
+  list-style: none;
+  gap: 40px; 
+  display:flex;
+  justify-content:center;
+}
+.navlinks a {
+    text-decoration: none;
+    color: #333; /* Color oscuro que contrasta con tu fondo claro #f8f8f8 */
+    padding: 8px 16px;
+    transition: all 0.3s ease; /* Hace que el cambio de color sea suave */
+}
+.navlinks a:hover {
+    background-color: #555;
+    color: white; /* Cambia el texto a blanco para que se lea sobre el fondo gris */
+    border-radius: 4px;
+}
+
+
+.formulario-seccion {
+    padding: 60px 20px;
+    background-color: #fafafa; /* Un gris casi blanco, muy elegante */
+    display: flex;
+    justify-content: center; /* Centra el formulario en la pantalla */
+}
+
+.formulario-minimalista {
+    background-color: white;
+    width: 100%;
+    max-width: 600px; /* Evita que sea gigantesco en pantallas grandes */
+    padding: 40px;
+    box-sizing: border-box;
+    /* Eliminamos el border: 2px solid black para un look más limpio */
+   
+
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* CAMPOS */
+.campo-form {
+    display: flex;
+    flex-direction: column; /* Apila el label arriba del input */
+    margin-bottom: 20px;
+    text-align: left; /* Alinea los textos a la izquierda */
+}
+
+.campo-form label {
+    font-family: 'Arial', sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+.campo-form input:focus, 
+.campo-form textarea:focus {
+    outline: none;
+    border-color: black; /* El borde se oscurece al escribir */
+}
+
+.campo-form input, 
+.campo-form textarea {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    padding: 12px 15px; /* Le da mucha altura y aire interior */
+    border: 1px solid #e0e0e0; /* Borde gris muy clarito */
+    border-radius: 4px; /* Esquinas apenas redondeadas */
+    font-family: inherit; /* Hereda la fuente de la página */
+    font-size: 16px;
+    box-sizing: border-box; /* Evita que el padding rompa el ancho */
+    transition: border-color 0.3s ease;
+}
+
+.formheader{
+    
+   text-align: center;
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+
+
+.boton-full {
+   background-color: black;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    width: 100%; /* En lugar de usar un padding enorme de 200px */
+    padding: 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    
+
+}
+.boton-full:hover{
+    background-color: #333; /* Un negro más claro al pasar el mouse */
+}
+
+
+
+.main-title{
+    display:flex;
+    justify-content:center;
+    font-size: 2vw;
+   font-weight: normal;
+   margin: 0;
+   text-transform: uppercase;
+  margin: 1vw;
+   font-family: 'Arapey', sans-serif;
+}
+ /*grid */
+ .reviews-grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(20vw, 1fr));
+    gap: 40px 110px; 
+    padding: 40px 5%;
+    width: 100%;
+    
+    box-sizing: border-box;
+    justify-content: center;
+
+
+ }
+
+ .review-card{
+
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    display: flex;
+    padding:1vw    ;
+    
+   flex-direction: column;
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+   font-family: 'Arapey', sans-serif;
+}
+
+
+
+.avatar-card img{
+    width:25%;
+    height:auto;
+    object-fit:cover;
+    background-color: #f7f7f7;
+
+}
+.box-info{
+    display:flex;
+    flex-direction:column;
+    
+    gap:10px;
+}
+
+.card-title {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #333;
+  margin: 0;
+  padding-left: 10px;
+}
+
+.card-comment {
+  font-size: 16px;
+  color: #666;
+  margin: 0;
+  padding-left: 10px;
+}
+.star-icon-s{
+    width:5%;
+}
+.title-box{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    
+    padding-left:7vw;
+    font-weight:normal;
+    letter-spacing: 0.2vw;
+    font-family: "Arapey";
+    font-size: 30px;
+     
+        
+}
+.subtitle{
+   
+    margin:2vw;
+
+    font-weight:bold;
+    letter-spacing: 0.2vw;
+    font-family: "Sans-serif";
+    font-size: 50px;
+}
+.overall-rating{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:10px;
+    border: 50px;
+    background-color:    #eeeeee;
+}
+.star-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.star-icon{
+    
+    width:3.5%;
+    
+}
+
