@@ -1,6 +1,10 @@
-function renderizarProductos(lista,contendorId){
-    const contenedor = document.getElementById(contenedorId);
-    contenedor.innerHTML = "";
+function renderizarProductos(lista, contenedorId) {
+  const contenedor = document.getElementById(contenedorId);
+  if (!contenedor) {
+    console.warn("No existe el contenedor:", contenedorId);
+    return;
+  }
+  contenedor.innerHTML = "";
 
   lista.forEach(producto => {
     const card = document.createElement("div");
@@ -17,9 +21,6 @@ function renderizarProductos(lista,contendorId){
   });
 }
 
-const hombres = productos.filter(p => p.categoria === "men");
-renderizarProductos(hombres, "contenedor-men");
-
 const secciones = [
   { contenedor: "contenedor-spring",      filtro: p => p.coleccion === "spring" },
   { contenedor: "contenedor-men",         filtro: p => p.categoria === "men" },
@@ -28,6 +29,5 @@ const secciones = [
 ];
 
 secciones.forEach(seccion => {
-  const lista = productos.filter(seccion.filtro).slice(0, 4); // máximo 4 por sección
+  const lista = productos.filter(seccion.filtro).slice(0, 4);
   renderizarProductos(lista, seccion.contenedor);
-});
