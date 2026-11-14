@@ -1,3 +1,4 @@
+import { productos } from "productos.js";
 function renderizarProductos(lista, contenedorId) {
   const contenedor = document.getElementById(contenedorId);
   if (!contenedor) {
