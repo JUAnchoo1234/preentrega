@@ -1,34 +1,25 @@
 import { productos } from "productos.js";
-function renderizarProductos(lista, contenedorId) {
-  const contenedor = document.getElementById(contenedorId);
-  if (!contenedor) {
-    console.warn("No existe el contenedor:", contenedorId);
+function renderizarProductos (lista,contenedor) {
+   const contenedor= document.getElementById(idContenedor);
+   if (!contenedor) {
+    console.log("No encontré el contenedor:", idContenedor);
     return;
-  }
-  contenedor.innerHTML = "";
 
-  lista.forEach(producto => {
-    const card = document.createElement("div");
-    card.classList.add("card");
-    card.innerHTML = `
-      <img src="${producto.imagen}" alt="${producto.nombre}">
-      <h3>${producto.nombre}</h3>
-      <p>$${producto.precio.toLocaleString("es-AR")}</p>
-      <button class="btn-agregar" data-id="${producto.id}">
-        AGREGAR AL CARRITO
-      </button>
+}
+contenedor.innerHTML = "";
+ lista.forEach(function (producto) {
+    contenedor.innerHTML += `
+      <div class="card">
+        <img src="${producto.imagen}" alt="${producto.nombre}">
+        <h3>${producto.nombre}</h3>
+        <p>$${producto.precio}</p>
+        <button class="btn-agregar" data-id="${producto.id}">AGREGAR AL CARRITO</button>
+      </div>
     `;
-    contenedor.appendChild(card);
   });
 }
 
-const secciones = [
-  { contenedor: "contenedor-spring",      filtro: p => p.coleccion === "spring" },
-  { contenedor: "contenedor-men",         filtro: p => p.categoria === "men" },
-  { contenedor: "contenedor-women",       filtro: p => p.categoria === "women" },
-  { contenedor: "contenedor-accessories", filtro: p => p.categoria === "accessories" }
-];
-
-secciones.forEach(seccion => {
-  const lista = productos.filter(seccion.filtro).slice(0, 4);
-  renderizarProductos(lista, seccion.contenedor);
+renderizarProductos(productos.filter(p => p.coleccion === "spring"), "contenedor-spring");
+renderizarProductos(productos.filter(p => p.categoria === "men"), "contenedor-men");
+renderizarProductos(productos.filter(p => p.categoria === "women"), "contenedor-women");
+renderizarProductos(productos.filter(p => p.categoria === "accessories"), "contenedor-accessories");
