@@ -1,4 +1,4 @@
-export const productos =[
+export  productos =[
     {id: 1, nombre :"Baggy Jean", precio: "$$", imagen: "img/sale 1.jpg", categoria:"men"},
     {id: 2, nombre :"Ferrari Jacket", precio: "$$$$", imagen: "img/sale 2.jpg", categoria:"women"},
     { id: 3, nombre :"Leather Jacket", precio: "$$", imagen: "img/sale 3.jpg", categoria:"men"},
